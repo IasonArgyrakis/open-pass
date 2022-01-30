@@ -37,7 +37,8 @@ class PasswordController extends Controller
      */
     public function index()
     {
-        //
+        $list=password::all();
+        return $list;
     }
 
     /**

@@ -22,3 +22,4 @@ Route::post("/password",[\App\Http\Controllers\PasswordController::class, 'store
 Route::put("/password/{id}",[\App\Http\Controllers\PasswordController::class, 'update']);
 Route::delete("/password/{id}",[\App\Http\Controllers\PasswordController::class, 'destroy']);
 Route::get("/password/{id}",[\App\Http\Controllers\PasswordController::class, 'show']);
+Route::get("/password",[\App\Http\Controllers\PasswordController::class, 'index']);
