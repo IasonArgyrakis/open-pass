@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post("/password",[\App\Http\Controllers\PasswordController::class, 'store']);
+Route::put("/password/{id}",[\App\Http\Controllers\PasswordController::class, 'update']);
+Route::delete("/password/{id}",[\App\Http\Controllers\PasswordController::class, 'destroy']);
+Route::get("/password/{id}",[\App\Http\Controllers\PasswordController::class, 'show']);
