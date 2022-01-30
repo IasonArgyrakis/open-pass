@@ -50,7 +50,7 @@ class PasswordController extends Controller
     {
 
         $existingPassword = password::find($id);
-        if ($existingPassword !== 0) {
+        if ($existingPassword !== NULL) {
             return $existingPassword;
 
         } else {
@@ -90,7 +90,7 @@ class PasswordController extends Controller
     {
         $data_instance = $this->request_to_data($request->all());
         $existingPassword = password::find($id);
-        if ($existingPassword !== 0) {
+        if ($existingPassword !== NULL) {
 
             $existingPassword->update($data_instance);
             $existingPassword->fresh();
